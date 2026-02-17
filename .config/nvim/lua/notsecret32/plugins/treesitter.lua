@@ -10,6 +10,7 @@ return {
       local treesitter = require("nvim-treesitter.config")
 
       treesitter.setup({
+        install_dir = vim.fn.stdpath("data") .. "/site",
         highlight = {
           enable = true,
         },
@@ -43,7 +44,7 @@ return {
           },
         },
       })
-    end
+    end,
   },
   {
     "MeanderingProgrammer/treesitter-modules.nvim",
@@ -59,5 +60,5 @@ return {
         },
       },
     },
-  }
+  },
 }

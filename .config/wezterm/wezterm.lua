@@ -23,6 +23,6 @@ config.colors = {
 }
 
 -- WSL
-config.default_domain = "WSL:archlinux"
+--config.default_domain = "WSL:archlinux"
 
 return config
