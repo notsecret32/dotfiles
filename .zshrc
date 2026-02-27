@@ -40,6 +40,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Android Envs
+#export ANDROID_HOME=$HOME/Android/Sdk
+#export PATH=$PATH:$ANDROID_HOME/emulator
+#export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # History setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
@@ -61,3 +66,6 @@ alias ls="eza --icons=always"
 alias cd="z"
 alias vi="nvim"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Created by `pipx` on 2026-02-18 07:50:05
+export PATH="$PATH:/home/user/.local/bin"

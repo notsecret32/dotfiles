@@ -2,8 +2,14 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
+--General
+keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Save file" })
+keymap.set("n", "<leader>W", "<cmd>wa<CR>", { desc = "Save all" })
+keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "Exit file" })
+keymap.set("n", "<leader>Q", "<cmd>qa<CR>", { desc = "Save and exit" })
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode" })
 
+-- highlight
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })

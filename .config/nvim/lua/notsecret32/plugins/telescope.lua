@@ -7,6 +7,8 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   config = function()
+    --BUG: No preview text highlight
+
     local telescope = require("telescope")
     local actions = require("telescope.actions")
 
@@ -17,7 +19,7 @@ return {
           i = {
             ["<C-k>"] = actions.move_selection_previous,
             ["<C-j>"] = actions.move_selection_next,
-            ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist
+            ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
           },
         },
       },

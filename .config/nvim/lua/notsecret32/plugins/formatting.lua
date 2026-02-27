@@ -1,7 +1,7 @@
 return {
   "stevearc/conform.nvim",
   event = { "BufReadPre", "BufNewFile" },
-  config = function ()
+  config = function()
     local conform = require("conform")
 
     conform.setup({
@@ -15,6 +15,8 @@ return {
         json = { "prettier" },
         yaml = { "prettier" },
         markdown = { "prettier" },
+        xml = { "prettier" },
+        svg = { "prettier" },
         lua = { "stylua" },
       },
       format_on_save = {
@@ -30,6 +32,6 @@ return {
         async = false,
         timeout_ms = 1000,
       })
-    end, { desc = "Format file or range (in visual mode)"})
-  end
+    end, { desc = "Format file or range (in visual mode)" })
+  end,
 }

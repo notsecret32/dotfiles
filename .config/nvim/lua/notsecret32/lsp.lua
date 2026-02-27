@@ -3,7 +3,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", {}),
   callback = function(ev)
     local keymap = vim.keymap
-    local opts = { buffer = ev.buf, silent = true, }
+    local opts = { buffer = ev.buf, silent = true }
+
+    --TODO: Open new tab when using LSP shotcuts
+    --TODO: View docs automatically when using functions
+    -- For example:
+    -- someFunc() // when i print ( autosuggestion window should appear with docs
 
     opts.desc = "Show LSP references"
     keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
@@ -18,7 +23,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts)
 
     opts.desc = "Show LSP type definitions"
-    keymap.set("n", "gt", "<cmd>Telescope lsp_lsp_definitions<CR>", opts)
+    keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
 
     opts.desc = "See available code actions"
     keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
