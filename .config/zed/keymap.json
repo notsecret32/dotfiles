@@ -8,7 +8,7 @@
 
       // Terminal
       "space c t": "command_palette::Toggle",
-      "alt-shift-i": "workspace::ToggleBottomDock",
+      "space c c": "workspace::ToggleBottomDock",
 
       // Explorer
       "space e e": "workspace::ToggleLeftDock",
