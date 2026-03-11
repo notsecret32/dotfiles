@@ -1,0 +1,105 @@
+[
+  {
+    // Work everywhere
+    "bindings": {
+      // Moving in list
+      "ctrl-j": "menu::SelectNext",
+      "ctrl-k": "menu::SelectPrevious",
+
+      // Terminal
+      "space c t": "command_palette::Toggle",
+      "alt-shift-i": "workspace::ToggleBottomDock",
+
+      // Explorer
+      "space e e": "workspace::ToggleLeftDock",
+      "space e f": "pane::RevealInProjectPanel",
+      "space e c": "project_panel::CollapseAllEntries",
+
+      // Find
+      "space f f": "file_finder::Toggle",
+      "space f s": "pane::DeploySearch",
+
+      // Clear search highligh
+      "space n h": "buffer_search::Dismiss",
+
+      // Toggle Zoom In
+      "space c m": "workspace::ToggleZoom",
+    },
+  },
+  {
+    "context": "Workspace || Terminal || (Editor && vim_mode == normal)",
+    "bindings": {
+      // Moving between panel
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+    },
+  },
+  {
+    // Explorer
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "o": "menu::Confirm",
+      "a": "project_panel::NewFile",
+      "x": "project_panel::Cut",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "h": "project_panel::CollapseSelectedEntry",
+      "l": "project_panel::ExpandSelectedEntry",
+      "y": "workspace::CopyPath",
+      "shift-a": "project_panel::NewDirectory",
+      "shift-y": "workspace::CopyRelativePath",
+      "shift-o": "project_panel::RevealInFileManager",
+    },
+  },
+  {
+    // Vim normal mode in editor
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      // Tabs
+      "space t n": "pane::ActivateNextItem",
+      "space t p": "pane::ActivatePreviousItem",
+      "space t x": "pane::CloseActiveItem",
+      "space t X": "pane::CloseOtherItems",
+
+      // Split
+      "space s v": "pane::SplitVertical",
+      "space s h": "pane::SplitHorizontal",
+      "space s x": "pane::CloseActiveItem",
+
+      // Save file/files
+      "space w": "workspace::Save",
+      "space W": "workspace::SaveAll",
+      "ctrl-s": "workspace::Save",
+      "ctrl-S": "workspace::SaveAll",
+
+      // Coding
+      "space d": "editor::ToggleInlineDiagnostics",
+      "space g g": "editor::ShowCompletions",
+    },
+  },
+  {
+    // Code actions & completions
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "ctrl-j": "editor::ContextMenuNext",
+      "ctrl-k": "editor::ContextMenuPrevious",
+    },
+  },
+  {
+    // Vim insert mode in in editor
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore",
+    },
+  },
+  {
+    "context": "((Workspace || Terminal) || (Editor && vim_mode == normal))",
+    "bindings": {
+      "alt-shift-i": "workspace::ToggleBottomDock",
+    },
+  },
+]

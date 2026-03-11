@@ -1,7 +1,7 @@
 # Run tmux on startup
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
   tmux attach-session -dt default || tmux new-session -s default
-fi 
+fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -41,9 +41,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Android Envs
-#export ANDROID_HOME=$HOME/Android/Sdk
-#export PATH=$PATH:$ANDROID_HOME/emulator
-#export PATH=$PATH:$ANDROID_HOME/platform-tools
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # History setup
 HISTFILE=$HOME/.zhistory
